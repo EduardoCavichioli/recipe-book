@@ -1,0 +1,9 @@
+<h2>{{recipe.dish}}</h2>
+<div class="tags">
+  <span *ngFor="let tag of recipe.tags">{{tag}}</span>
+</div>
+<ol>
+  <li *ngFor="let step of recipe.steps">
+    {{step}}
+  </li>
+</ol>
