@@ -10,7 +10,8 @@ export const RECIPES: Recipe[] = [
       "chicken"
     ],
     "tags": [
-      "hot"
+      "hot",
+      "nutritive"
     ]
   },
   {

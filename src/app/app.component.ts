@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipe-book';
+  title = 'Recipe Book';
+  isCollapsed: boolean;
+
+  ngOnInit() {
+    this.isCollapsed = true;
+  }
+
+  onCollapse() : void {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
