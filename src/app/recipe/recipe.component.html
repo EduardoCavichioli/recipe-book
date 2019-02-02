@@ -1,5 +1,5 @@
 <div *ngIf="recipe">
-  <h2>{{recipe.dish}}</h2>
+  <h2>{{recipe.dish | uppercase}}</h2>
   <div class="tags">
     <span *ngFor="let tag of recipe.tags">#{{tag}}</span>
   </div>
