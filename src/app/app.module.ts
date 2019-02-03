@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { AboutComponent } from './about/about.component';
+import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 const appRoutes: Routes = [
   { path: 'recipes', component: RecipeListComponent },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     RecipeComponent,
     RecipeListComponent,
-    AboutComponent
+    AboutComponent,
+    AlertMessageComponent
   ],
   imports: [
     BrowserModule,

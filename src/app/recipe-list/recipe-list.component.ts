@@ -12,6 +12,7 @@ import { RECIPES } from '../recipe-mock';
 export class RecipeListComponent implements OnInit {
   recipes = RECIPES;
   selectedRecipe: Recipe;
+  alert: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,13 +20,19 @@ export class RecipeListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.alert = '';
     let id = Number(this.route.snapshot.paramMap.get('id'));
     //TODO change to api GET
     if (id) {
-      this.selectedRecipe = this.recipes.filter((recipe) => {
+      let filteredList = this.recipes.filter((recipe) => {
         return recipe.id === id;
-      })[0];
-    }
+      });
+      if (filteredList.length > 0) {
+        this.selectedRecipe = filteredList[0];
+      } else {
+        this.alert = 'Invalid ID as parameter'
+      }
+    } 
   }
 
   onSelect(recipe: Recipe) : void {
