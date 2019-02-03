@@ -8,10 +8,12 @@ import { Recipe } from '../recipe';
 })
 export class RecipeComponent implements OnInit {
   @Input() recipe: Recipe;
+  readonly: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.readonly = true;
   }
 
 }

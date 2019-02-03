@@ -1,10 +1,16 @@
-<ng-container
-  *ngIf="recipe; then hasRecipe; else noRecipe">
-</ng-container>
+<div class="jumbotron jumbo-top">
+  <ng-container
+    *ngIf="recipe; then hasRecipe; else noRecipe">
+  </ng-container>
+</div>
 
 <ng-template #hasRecipe>
   <div>
     <h2>{{recipe.dish | uppercase}}</h2>
+    <div>
+      <ngb-rating [(rate)]="recipe.rate" [readonly]="readonly"></ngb-rating>
+      <span>&nbsp;{{recipe.rate}} stars</span>
+    </div>
     <div class="tags">
       <span *ngFor="let tag of recipe.tags">#{{tag}}</span>
     </div>

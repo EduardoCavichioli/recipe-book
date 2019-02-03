@@ -11,11 +11,10 @@ export class AlertMessageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.error(alert);
   }
 
   close() {
     this.alert = null;
   }
 
-}
+} 

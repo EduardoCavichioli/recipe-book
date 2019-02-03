@@ -36,7 +36,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   onSelect(recipe: Recipe) : void {
-    this.selectedRecipe = recipe;
+    this.selectedRecipe = (recipe !== this.selectedRecipe) ? recipe : null;
   }
 
 }

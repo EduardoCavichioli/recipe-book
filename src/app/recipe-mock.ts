@@ -4,6 +4,7 @@ export const RECIPES: Recipe[] = [
   {
     "id":123,
     "dish":"Soup",
+    "rate": 5,
     "steps": [
       "Cut the chicken in small pieces",
       "Fry the chicken",
@@ -23,6 +24,7 @@ export const RECIPES: Recipe[] = [
   {
     "id":124,
     "dish":"Burguer",
+    "rate": 6,
     "steps": [
       "Fry the hamburguer",
       "Slice the bread",
@@ -39,6 +41,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     "id":124,
+    "rate": 9,
     "dish":"hotdog",
     "steps": [
       "Cook the hotdogs",
