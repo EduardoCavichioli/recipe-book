@@ -11,7 +11,8 @@ import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   { path: 'recipes', component: RecipeListComponent },
-  { path: 'about', component: AboutComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'recipes/:id', component: RecipeListComponent },
   {
     path: '',
     redirectTo: '/recipes',
